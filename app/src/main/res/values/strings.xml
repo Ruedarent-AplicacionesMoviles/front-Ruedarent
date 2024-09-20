@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ruedarent</string>
+    <string name="logo_welcome">Logo</string>
+    <string name="log_in_welcome">Log In</string>
+    <string name="register_welcome">Register</string>
+    <string name="logo_loginactivity">LOGO</string>
+    <string name="log_in_loginactivity">Log In</string>
+    <string name="email_loginactivity">Email</string>
+    <string name="password_loginactivity">Password</string>
+    <string name="login">Log In</string>
+    <string name="logoregister_registeractivity">LogoRegister</string>
+    <string name="tvregister_registeractivity">Register</string>
+    <string name="btregister_registeractivity">Register</string>
+    <string name="name_registeractivity">Name</string>
+    <string name="last_name_registeractivity">Last Name</string>
+    <string name="email_registeractivity">Email</string>
+    <string name="password_registeractivity">Password</string>
+</resources>
