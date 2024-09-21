@@ -3,7 +3,8 @@ package com.example.ruedarent.data
 import androidx.room.Database
 import androidx.room.RoomDatabase
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class, Plan::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
+    abstract fun planDao(): PlanDao
 }
