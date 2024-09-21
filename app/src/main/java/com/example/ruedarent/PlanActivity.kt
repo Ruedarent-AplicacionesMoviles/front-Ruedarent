@@ -42,9 +42,7 @@ class PlanActivity : AppCompatActivity() {
 
     private fun insertPlansManually() {
         CoroutineScope(Dispatchers.IO).launch {
-            // Verificar si ya existen planes en la base de datos
             if (DatabaseBuilder.getInstance(this@PlanActivity).planDao().getAll().isEmpty()) {
-                // Si está vacío, insertar los planes
                 val plan1 = Plan(
                     id = 1,
                     plan_name = "Bronze",
@@ -67,11 +65,9 @@ class PlanActivity : AppCompatActivity() {
                     plan_benefit2 = "Assistance 24/7"
                 )
 
-                // Insertar estos planes
                 DatabaseBuilder.getInstance(this@PlanActivity).planDao().insertPlan(plan1, plan2, plan3)
             }
 
-            // Cargar los planes después de la inserción/verificación
             loadPlan()
         }
     }

@@ -42,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
                             // Redirigimos al MainActivity después del login exitoso
                             val intent = Intent(this@LoginActivity, MainActivity::class.java)
                             startActivity(intent)
+
                             finish()
                         } else {
                             Toast.makeText(this@LoginActivity, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()

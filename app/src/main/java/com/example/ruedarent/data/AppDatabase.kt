@@ -1,14 +1,13 @@
 package com.example.ruedarent.data
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [User::class, Plan::class], version = 1)
+@Database(entities = [User::class, Plan::class, Vehicle::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun planDao(): PlanDao
+    abstract fun vehicleDao(): VehicleDao
 
     /**
     companion object {
