@@ -21,7 +21,7 @@ class WelcomeActivity : AppCompatActivity() {
         }
     //CAMBIAR POR REGISTER
         registerButton.setOnClickListener{
-            val intent = Intent(this,EditVehicleActivity::class.java)
+            val intent = Intent(this,PlanActivity::class.java)
             startActivity(intent)
         }
     }

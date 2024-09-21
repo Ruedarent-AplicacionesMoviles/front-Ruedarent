@@ -13,7 +13,7 @@ object DatabaseBuilder {
                 INSTANCE = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "ruedarent_db" // Nombre de la base de datos
+                    "ruedarent_db2" // Nombre de la base de datos
                 ).build()
             }
         }
