@@ -13,13 +13,15 @@ class WelcomeActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.btLoginWelcome)
         val registerButton = findViewById<Button>(R.id.btRegisterWelcome)
 
+
         loginButton.setOnClickListener{
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
-        }
 
+        }
+    //CAMBIAR POR REGISTER
         registerButton.setOnClickListener{
-            val intent = Intent(this,RegisterActivity::class.java)
+            val intent = Intent(this,EditVehicleActivity::class.java)
             startActivity(intent)
         }
     }
