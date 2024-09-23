@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título de la pantalla -->
+
+    <!-- ViewPager (o RecyclerView horizontal) para mostrar los vehículos destacados -->
+
+    <!-- RecyclerView para la lista de vehículos -->
+
+    <TextView
+        android:id="@+id/tvHighlightsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Lo más Destacado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFeaturedVehicles"
+        app:layout_constraintBottom_toTopOf="@id/rvVehicles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHighlightsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVehicles"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvFeaturedVehicles" />
+</androidx.constraintlayout.widget.ConstraintLayout>

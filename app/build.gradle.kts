@@ -52,5 +52,8 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_Version")
     implementation("androidx.room:room-ktx:$room_Version")
 
+    //Se implementa Glide para cargar imágenes
+   implementation("com.github.bumptech.glide:glide:4.12.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
 
 }
