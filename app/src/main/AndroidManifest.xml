@@ -27,6 +27,7 @@
         <activity android:name=".EditVehicleActivity"/>
         <activity android:name=".PlanActivity"/>
         <activity android:name=".NotificationsActivity"/>
+        <activity android:name="VehicleActivity"/>
     </application>
 
 </manifest>

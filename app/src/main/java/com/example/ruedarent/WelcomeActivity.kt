@@ -1,5 +1,6 @@
 package com.example.ruedarent
 
+import VehicleActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -15,7 +16,7 @@ class WelcomeActivity : AppCompatActivity() {
 
 
         loginButton.setOnClickListener{
-            val intent = Intent(this,NotificationsActivity::class.java)
+            val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
 
         }
