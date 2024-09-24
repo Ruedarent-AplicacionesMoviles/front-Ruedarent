@@ -1,14 +1,14 @@
-package com.example.ruedarent
+package com.example.ruedarent.notifications
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Adapter
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ruedarent.R
 import com.example.ruedarent.data.DatabaseBuilder
-import com.example.ruedarent.data.Notifications
+import com.example.ruedarent.notifications.data.Notifications
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

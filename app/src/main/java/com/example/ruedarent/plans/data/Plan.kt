@@ -1,4 +1,4 @@
-package com.example.ruedarent.data
+package com.example.ruedarent.plans.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

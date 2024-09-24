@@ -1,4 +1,4 @@
-package com.example.ruedarent.data
+package com.example.ruedarent.loginregister.User
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

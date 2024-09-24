@@ -1,4 +1,4 @@
-package com.example.ruedarent
+package com.example.ruedarent.vehicle
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -8,8 +8,9 @@ import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ruedarent.R
 import com.example.ruedarent.data.DatabaseBuilder
-import com.example.ruedarent.data.Vehicle
+import com.example.ruedarent.vehicle.data.Vehicle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

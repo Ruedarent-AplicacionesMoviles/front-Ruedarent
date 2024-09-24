@@ -1,9 +1,12 @@
+package com.example.ruedarent.vehicle
+
+import com.example.ruedarent.vehicle.data.VehicleAdapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ruedarent.R
-import com.example.ruedarent.data.Vehicle
+import com.example.ruedarent.vehicle.data.Vehicle
 
 class VehicleActivity : AppCompatActivity() {
 
@@ -14,7 +17,7 @@ class VehicleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_highlights)  // Este layout debe contener tu RecyclerView
 
-        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+        val recyclerView: RecyclerView = findViewById(R.id.rvVehicles)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Simulación de lista de vehículos con todos los campos necesarios para la clase Vehicle

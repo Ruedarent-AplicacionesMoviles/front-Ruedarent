@@ -1,4 +1,4 @@
-package com.example.ruedarent.data
+package com.example.ruedarent.vehicle.data
 
 class VehicleWithUser(
     val id: Int,

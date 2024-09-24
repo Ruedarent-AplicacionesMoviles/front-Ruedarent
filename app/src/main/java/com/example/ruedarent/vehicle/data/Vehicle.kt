@@ -1,12 +1,13 @@
-package com.example.ruedarent.data
+package com.example.ruedarent.vehicle.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
+import com.example.ruedarent.loginregister.User.User
 
 
-@Entity("vehicle",
+@Entity("com/example/ruedarent/vehicle",
     foreignKeys = [
         ForeignKey(
             entity = User::class,
