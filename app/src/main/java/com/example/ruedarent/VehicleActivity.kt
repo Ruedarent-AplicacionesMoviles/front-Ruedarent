@@ -14,7 +14,7 @@ class VehicleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_highlights)  // Este layout debe contener tu RecyclerView
 
-        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+        val recyclerView: RecyclerView = findViewById(R.id.rvVehicles)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Simulación de lista de vehículos con todos los campos necesarios para la clase Vehicle
