@@ -1,6 +1,5 @@
 package com.example.ruedarent
 
-import VehicleActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button

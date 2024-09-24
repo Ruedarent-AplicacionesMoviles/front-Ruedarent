@@ -1,4 +1,4 @@
-package com.example.ruedarent
+package com.example.ruedarent.sampledata
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.example.ruedarent.data.Plan
+import com.example.ruedarent.R
+import com.example.ruedarent.data.sampledata.Plan
 
 class PlanAdapter(val plans : List<Plan>) : Adapter<PlanPrototype>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlanPrototype {

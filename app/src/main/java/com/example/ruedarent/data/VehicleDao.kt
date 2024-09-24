@@ -8,6 +8,8 @@ import androidx.room.Update
 
 @Dao
 interface VehicleDao {
+    @Query("SELECT * FROM vehicle WHERE id = :vehicleId LIMIT 1")
+    fun getVehicleById(vehicleId: Int): Vehicle
 
     @Query("Select * from 'vehicle' ")
     fun getAll(): List<Vehicle>

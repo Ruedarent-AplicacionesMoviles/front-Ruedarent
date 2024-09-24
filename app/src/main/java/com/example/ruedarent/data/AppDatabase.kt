@@ -2,6 +2,10 @@ package com.example.ruedarent.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.example.ruedarent.data.sampledata.Notifications
+import com.example.ruedarent.data.sampledata.NotificationsDao
+import com.example.ruedarent.data.sampledata.Plan
+import com.example.ruedarent.data.sampledata.PlanDao
 
 @Database(entities = [User::class, Plan::class, Vehicle::class, Notifications::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

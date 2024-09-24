@@ -30,7 +30,7 @@ class EditVehicleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit)
+        setContentView(R.layout.activity_edit_vehicle)
 
         s_Vehicle = findViewById(R.id.s_Vehicle)
         val adapter = ArrayAdapter.createFromResource(

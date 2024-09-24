@@ -1,13 +1,13 @@
-package com.example.ruedarent
+package com.example.ruedarent.sampledata
 
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ruedarent.data.AppDatabase
+import com.example.ruedarent.R
 import com.example.ruedarent.data.DatabaseBuilder
-import com.example.ruedarent.data.Plan
+import com.example.ruedarent.data.sampledata.Plan
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

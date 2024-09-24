@@ -39,11 +39,11 @@ class LoginActivity : AppCompatActivity() {
                     runOnUiThread {
                         if (user != null) {
                             Toast.makeText(this@LoginActivity, "Bienvenido ${user.firstName}", Toast.LENGTH_SHORT).show()
-                            // Redirigimos al MainActivity después del login exitoso
-                            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                            // Redirigimos a VehicleListActivity después del login exitoso
+                            val intent = Intent(this@LoginActivity, VehicleListActivity::class.java)
                             startActivity(intent)
 
-                            finish()
+                            finish()  // Finaliza LoginActivity para que el usuario no vuelva al login al presionar atrás
                         } else {
                             Toast.makeText(this@LoginActivity, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
                         }
@@ -55,3 +55,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+

@@ -1,12 +1,12 @@
-package com.example.ruedarent
+package com.example.ruedarent.sampledata
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ruedarent.data.Notifications
+import com.example.ruedarent.R
+import com.example.ruedarent.data.sampledata.Notifications
 
 class NotificationAdapter(val notifications: List<Notifications>): RecyclerView.Adapter<NotificationPrototype>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationPrototype {
