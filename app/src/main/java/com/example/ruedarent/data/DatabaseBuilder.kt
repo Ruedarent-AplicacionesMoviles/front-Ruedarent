@@ -14,7 +14,9 @@ object DatabaseBuilder {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "ruedarent_db4" // Nombre de la base de datos
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()  // Aquí se agrega el fallback
+                    .build()
             }
         }
         return INSTANCE!!
