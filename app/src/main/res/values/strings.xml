@@ -18,6 +18,7 @@
     <string name="edit_vehicle">Edit Vehicle</string>
     <string name="textview">TextView</string>
     <string name="button">Button</string>
+    <string name="logo_description">Logo Description</string>
     <string name="add_vehicle">ADD VEHICLE</string>
     <string-array name="vehicle_types">
         <item>Car</item>
