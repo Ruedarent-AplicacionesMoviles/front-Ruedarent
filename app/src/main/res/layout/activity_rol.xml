@@ -1,0 +1,123 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!-- Encabezado con fondo verde y flecha de atrás -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#0fa968">
+
+        <!-- Flecha de atrás -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="@string/back_arrow_description"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp" />
+
+        <!-- Título "Rol" -->
+        <TextView
+            android:id="@+id/titleRol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rol"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <!-- Contenedor principal con opciones de rol -->
+    <LinearLayout
+        android:id="@+id/containerRoles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:layout_below="@id/header"
+        android:gravity="center">
+
+        <!-- Imagen del Propietario -->
+        <ImageView
+            android:id="@+id/iconoPerfilPropietario"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_propietario"
+            android:contentDescription="@string/propietario_icon" />
+
+        <!-- Botón para Propietario -->
+        <LinearLayout
+            android:id="@+id/buttonPropietario"
+            android:layout_width="149dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#1acd81"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Propietario"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Imagen del Rentador -->
+        <ImageView
+            android:id="@+id/iconoPerfilRentador"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_rentador"
+            android:contentDescription="@string/rentador_icon" />
+
+        <!-- Botón para Rentador -->
+        <LinearLayout
+            android:id="@+id/buttonRentador"
+            android:layout_width="149dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#1acd81"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textRentador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Rentador"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
