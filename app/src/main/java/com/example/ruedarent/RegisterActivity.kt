@@ -97,12 +97,13 @@ class RegisterActivity : AppCompatActivity() {
                     if (userExists) {
                         Toast.makeText(this@RegisterActivity, "El correo ya está registrado", Toast.LENGTH_SHORT).show()
                     } else {
-                        // Crear y guardar el nuevo usuario
+                        // Crear y guardar el nuevo usuario con un rol predeterminado
                         val newUser = User(
                             firstName = nombres,
                             lastName = apellidos,
                             email = correo,
-                            password = contraseña
+                            password = contraseña,
+                            role = "Sin seleccionar" // Rol predeterminado hasta que el usuario seleccione uno
                         )
                         CoroutineScope(Dispatchers.IO).launch {
                             userDao.insertUser(newUser)

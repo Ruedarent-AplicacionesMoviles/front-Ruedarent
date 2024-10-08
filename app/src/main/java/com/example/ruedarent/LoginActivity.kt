@@ -41,13 +41,17 @@ class LoginActivity : AppCompatActivity() {
                     runOnUiThread {
                         if (user != null) {
                             Toast.makeText(this@LoginActivity, "Bienvenido ${user.firstName}", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this@LoginActivity, VehicleListActivity::class.java)
+
+                            // Crear un Intent para pasar a RolActivity y añadir el correo electrónico del usuario
+                            val intent = Intent(this@LoginActivity, RolActivity::class.java)
+                            intent.putExtra("USER_EMAIL", user.email) // Pasamos el correo del usuario
                             startActivity(intent)
 
-                            finish()
+                            finish() // Finalizamos LoginActivity
                         } else {
                             Toast.makeText(this@LoginActivity, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
                         }
+
                     }
                 }
             } else {
