@@ -20,6 +20,10 @@
     <string name="button">Button</string>
     <string name="logo_description">Logo Description</string>
     <string name="add_vehicle">ADD VEHICLE</string>
+    <string name="back_arrow_description">Back Arrow</string>
+    <string name="rentador_icon">Rentador Icon</string>
+    <string name="propietario_icon">Propietario Icon</string>
+
     <string-array name="vehicle_types">
         <item>Car</item>
         <item>Bike</item>
