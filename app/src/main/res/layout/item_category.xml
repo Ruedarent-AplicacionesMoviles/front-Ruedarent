@@ -1,0 +1,76 @@
+<!-- res/layout/item_category.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="243dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_gravity="center_horizontal"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Imagen de la categoría -->
+        <ImageView
+            android:id="@+id/imageCategory"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:src="@drawable/login_logo_image"
+            android:contentDescription="@string/category_image_description"
+            android:scaleType="centerCrop" />
+
+        <!-- Nombre de la categoría -->
+        <TextView
+            android:id="@+id/textCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category Name"
+            android:textColor="#1ACD81"
+            android:textSize="20sp"
+            android:fontFamily="@font/inter"
+            android:layout_below="@id/imageCategory"
+            android:layout_marginTop="8dp" />
+
+        <!-- Descripción de la categoría -->
+        <TextView
+            android:id="@+id/textCategoryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category Description"
+            android:textColor="#616161"
+            android:textSize="15sp"
+            android:fontFamily="@font/inter"
+            android:layout_below="@id/textCategoryName"
+            android:layout_marginTop="4dp" />
+
+        <!-- Botón Editar -->
+        <ImageView
+            android:id="@+id/buttonEditar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_editar"
+            android:contentDescription="@string/editar_categoria_description"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Botón Eliminar -->
+        <ImageView
+            android:id="@+id/buttonEliminar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_eliminar"
+            android:contentDescription="@string/eliminar_categoria_description"
+            android:layout_below="@id/buttonEditar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -20,10 +20,19 @@
     <string name="button">Button</string>
     <string name="logo_description">Logo Description</string>
     <string name="add_vehicle">ADD VEHICLE</string>
-    <string name="back_arrow_description">Back Arrow</string>
-    <string name="rentador_icon">Rentador Icon</string>
-    <string name="propietario_icon">Propietario Icon</string>
-
+    <string name="back_arrow_description">Regresar</string>
+    <string name="profile_circle_description">Imagen de Perfil</string>
+    <string name="propietario_icon">Icono de Propietario</string>
+    <string name="rentador_icon">Icono de Rentador</string>
+    <string name="vehiculo_image_description">Imagen del Vehículo</string>
+    <string name="editar_vehiculo_description">Editar Vehículo</string>
+    <string name="eliminar_vehiculo_description">Eliminar Vehículo</string>
+    <string name="pedidos_description">Pedidos</string>
+    <string name="vehiculos_description">Vehículos</string>
+    <string name="perfil_description">Perfil</string>
+    <string name="category_image_description">Imagen de la categoría</string>
+    <string name="editar_categoria_description">Editar Categoría</string>
+    <string name="eliminar_categoria_description">Eliminar Categoría</string>
     <string-array name="vehicle_types">
         <item>Car</item>
         <item>Bike</item>

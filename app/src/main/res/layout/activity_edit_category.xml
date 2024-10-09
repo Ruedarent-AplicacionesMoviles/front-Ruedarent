@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Título "Editar categoria" -->
+        <TextView
+            android:id="@+id/titleEditCategory"
+            android:layout_width="165dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="9sp"
+            android:gravity="center_horizontal"
+            android:text="Editar categoria" />
+
+        <!-- Imagen de la categoría -->
+        <ImageView
+            android:id="@+id/imageViewEditCategory"
+            android:layout_width="219dp"
+            android:layout_height="219dp"
+            android:layout_below="@id/titleEditCategory"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/login_logo_image"
+            android:contentDescription="@string/category_image_description"
+            android:scaleType="centerCrop"
+            android:background="@drawable/et_add_category_placeholder"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Botón para seleccionar la imagen -->
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Imagen"
+            android:layout_below="@id/imageViewEditCategory"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Nombre de la categoría -->
+        <TextView
+            android:id="@+id/textNombreEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:text="Nombre"
+            android:layout_below="@id/buttonSelectImage"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEditCategoryName"
+            android:layout_width="325dp"
+            android:layout_height="61dp"
+            android:layout_below="@id/textNombreEdit"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/et_add_category_placeholder"
+            android:hint="Nombre de la categoria"
+            android:padding="8dp"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <!-- Descripción de la categoría -->
+        <TextView
+            android:id="@+id/textDescripcionEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:text="Descripción"
+            android:layout_below="@id/editTextEditCategoryName"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEditCategoryDescription"
+            android:layout_width="325dp"
+            android:layout_height="61dp"
+            android:layout_below="@id/textDescripcionEdit"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/et_add_category_placeholder"
+            android:hint="Descripción de la categoria"
+            android:padding="8dp"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <!-- Botón "Actualizar categoria" -->
+        <LinearLayout
+            android:id="@+id/buttonUpdateCategory"
+            android:layout_width="284dp"
+            android:layout_height="51dp"
+            android:layout_below="@id/editTextEditCategoryDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#1ACD81"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textUpdateCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Actualizar categoria"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

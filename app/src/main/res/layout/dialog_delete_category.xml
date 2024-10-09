@@ -1,0 +1,65 @@
+<!-- res/layout/dialog_delete_category.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="284dp"
+    android:layout_height="117.5dp"
+    android:background="@drawable/dialog_content"
+    android:padding="16dp">
+
+    <!-- Texto de confirmación -->
+    <TextView
+        android:id="@+id/textConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="¿Estás seguro de que deseas eliminar esta categoría?"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <!-- Botón Cancelar -->
+    <LinearLayout
+        android:id="@+id/buttonCancelar"
+        android:layout_width="82.1dp"
+        android:layout_height="21.3dp"
+        android:layout_below="@id/textConfirm"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="#54a5f0"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+    <!-- Botón Eliminar -->
+    <LinearLayout
+        android:id="@+id/buttonEliminar"
+        android:layout_width="82.1dp"
+        android:layout_height="21.3dp"
+        android:layout_below="@id/textConfirm"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:background="#54a5f0"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+</RelativeLayout>

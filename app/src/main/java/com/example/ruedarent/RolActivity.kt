@@ -86,9 +86,15 @@ class RolActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     Toast.makeText(this@RolActivity, "Rol seleccionado: $role", Toast.LENGTH_SHORT).show()
                     // Redirigir a la actividad principal o a donde desees
-                    val intent = Intent(this@RolActivity, MainActivity::class.java)
+                    val intent = if (role == "Propietario") {
+                        Intent(this@RolActivity, VehicleCategoryListActivity::class.java)
+                    } else {
+                        // Si es Rentador, redirige a otra actividad
+                        Intent(this@RolActivity, MainActivity::class.java)
+                    }
+                    intent.putExtra("USER_ID", user.id)
                     startActivity(intent)
-                    finish() // Opcional: cerrar RolActivity para que no se pueda volver atrás
+                    finish()
                 }
             } else {
                 // Usuario no encontrado

@@ -1,46 +1,39 @@
+// Vehicle.kt
 package com.example.ruedarent.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
+import androidx.room.Index
+import androidx.room.PrimaryKey
 
-
-@Entity("vehicle",
+@Entity(
+    tableName = "vehicle",
     foreignKeys = [
         ForeignKey(
             entity = User::class,
             parentColumns = ["id"],
             childColumns = ["userId"],
             onDelete = ForeignKey.CASCADE
+        ),
+        ForeignKey(
+            entity = VehicleCategory::class,
+            parentColumns = ["id"],
+            childColumns = ["categoryId"],
+            onDelete = ForeignKey.CASCADE
         )
-    ])
-data class Vehicle (
+    ],
+    indices = [Index("userId"), Index("categoryId")]
+)
+data class Vehicle(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-
-
-
-    @ColumnInfo
     val type: String,
-
-    @ColumnInfo
     val year: String,
-
-    @ColumnInfo
     val description: String,
-
-    @ColumnInfo
     val salePrice: String,
-
-    @ColumnInfo
     val rentalPrice: String,
-
-    @ColumnInfo
     val region: String,
-
-    @ColumnInfo
     val imagen: String,
-
-    @ColumnInfo(index = true)
-    val userId: Int
+    val userId: Int,
+    val categoryId: Int // Nuevo campo para relacionar con VehicleCategory
 )

@@ -28,12 +28,25 @@ class AddVehicleActivity : AppCompatActivity() {
     private lateinit var etRentalPrice: EditText
     private lateinit var btnSaveVehicle: Button
 
+    private var categoryId: Int = -1 // Almacenar categoryId
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_vehicle)
 
         db = DatabaseBuilder.getInstance(applicationContext)
 
+        // Recibir el categoryId pasado desde la actividad anterior
+        categoryId = intent.getIntExtra("CATEGORY_ID", -1)
+
+        if (categoryId == -1) {
+            // Manejar el error de categoryId no válido
+            Toast.makeText(this, "Invalid category selected", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        // Vinculación de vistas
         spinnerVehicleType = findViewById(R.id.spinnerVehicleType)
         etYear = findViewById(R.id.etYear)
         etDescription = findViewById(R.id.etDescription)
@@ -68,7 +81,8 @@ class AddVehicleActivity : AppCompatActivity() {
                         rentalPrice = rentalPrice,
                         region = "Lima",  // Ajusta si es necesario
                         imagen = "bike_image.png",  // Siempre usamos la imagen bike_image.png
-                        userId = 1  // Ajusta según sea necesario
+                        userId = 1,  // Ajusta según sea necesario
+                        categoryId = categoryId  // Pasamos el categoryId aquí
                     )
                     db.vehicleDao().insert(newVehicle)
 
@@ -83,5 +97,6 @@ class AddVehicleActivity : AppCompatActivity() {
         }
     }
 }
+
 
 
