@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:ruedarentfrontend/services/auth_service.dart';
 import 'package:ruedarentfrontend/user_type_selection_screen.dart'; // Pantalla para selección de tipo de usuario
 import 'renter/home_screen_rentador.dart'; // Importa la pantalla Home del Rentador
@@ -128,3 +128,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+*/

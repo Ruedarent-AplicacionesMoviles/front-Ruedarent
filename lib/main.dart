@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Importa la pantalla de login
+import '/user_type_selection_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const LoginScreen(), // La pantalla inicial es LoginScreen
+      home: const UserTypeSelectionScreen(), // La pantalla inicial es LoginScreen
     );
   }
 }

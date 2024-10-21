@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
+import 'owner/home_screen_owner.dart';  // Asegúrate de importar correctamente
+import 'renter/home_screen_rentador.dart';  // Asegúrate de importar correctamente
 
 class UserTypeSelectionScreen extends StatelessWidget {
   const UserTypeSelectionScreen({Key? key}) : super(key: key);
@@ -14,30 +15,31 @@ class UserTypeSelectionScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Botón para Propietario
             ElevatedButton(
               onPressed: () {
-                // Llevar al usuario a la pantalla de registro como rentador
+                // Redirige al Home del Propietario con el ownerId correspondiente
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RegisterScreen(role: 'rentador'),
+                    builder: (context) => HomeScreenOwner(ownerId: '1'),  // Asegúrate de pasar el ownerId correcto
                   ),
                 );
               },
-              child: const Text('Registrarse como Rentador'),
+              child: const Text('Entrar como Propietario'),
             ),
             const SizedBox(height: 20),
+            // Botón para Rentador
             ElevatedButton(
               onPressed: () {
-                // Llevar al usuario a la pantalla de registro como propietario
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RegisterScreen(role: 'propietario'),
+                    builder: (context) => HomeScreenRenter(),  // Redirige al Home del Rentador
                   ),
                 );
               },
-              child: const Text('Registrarse como Propietario'),
+              child: const Text('Entrar como Rentador'),
             ),
           ],
         ),

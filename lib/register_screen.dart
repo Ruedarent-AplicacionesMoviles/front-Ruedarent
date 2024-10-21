@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:ruedarentfrontend/services/auth_service.dart';
 import 'renter/home_screen_rentador.dart';
 import 'plan_selection_screen.dart'; // Pantalla solo para propietarios
@@ -150,3 +150,4 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 }
+*/

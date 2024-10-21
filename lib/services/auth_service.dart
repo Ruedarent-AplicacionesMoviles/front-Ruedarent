@@ -4,6 +4,22 @@ import 'dart:convert';
 class AuthService {
   static const String baseUrl = 'http://localhost:3000';
 
+  // Método para obtener los detalles de un propietario por su idOwner
+  Future<Map<String, dynamic>> getOwnerDetailsById(int idOwner) async {
+    final response = await http.get(Uri.parse('$baseUrl/students?idOwner=$idOwner'));
+
+    if (response.statusCode == 200) {
+      final List owners = jsonDecode(response.body);
+      if (owners.isNotEmpty) {
+        return owners.first;  // Retorna el primer resultado si hay un propietario con ese idOwner
+      } else {
+        throw Exception('Propietario no encontrado');
+      }
+    } else {
+      throw Exception('Error al obtener detalles del propietario');
+    }
+  }
+
   // Método para iniciar sesión
   Future<bool> login(String email, String password) async {
     final response = await http.get(Uri.parse('$baseUrl/students?email=$email&password=$password'));
@@ -117,4 +133,5 @@ class AuthService {
       throw Exception('Error al obtener detalles del propietario');
     }
   }
+
 }
