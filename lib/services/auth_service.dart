@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AuthService {
-  static const String baseUrl = 'http://localhost:3000';
+  static const String baseUrl = 'http://10.0.2.2:3000';
 
   // Método para obtener los detalles de un propietario por su idOwner
   Future<Map<String, dynamic>> getOwnerDetailsById(int idOwner) async {
@@ -11,7 +11,7 @@ class AuthService {
     if (response.statusCode == 200) {
       final List owners = jsonDecode(response.body);
       if (owners.isNotEmpty) {
-        return owners.first;  // Retorna el primer resultado si hay un propietario con ese idOwner
+        return owners.first;
       } else {
         throw Exception('Propietario no encontrado');
       }

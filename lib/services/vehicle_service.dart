@@ -3,18 +3,22 @@ import 'package:http/http.dart' as http;
 import '../model/vehicle.dart';
 
 class VehicleService {
-  final String baseUrl = 'http://localhost:3000';  // Para emulador de Android (localhost para web)
+  final String baseUrl = 'http://10.0.2.2:3000';
 
+  //metodo para mostrar los vehiculos
   Future<List<Vehicle>> getVehicles(String ownerId) async {
-    final response = await http.get(Uri.parse('$baseUrl/vehicles?idOwner=$ownerId'));  // Cambia a idOwner
+    final response = await http.get(Uri.parse('$baseUrl/vehicles?idOwner=$ownerId'));
+    print('Respuesta de la API: ${response.body}');
     if (response.statusCode == 200) {
       final List<dynamic> jsonData = json.decode(response.body);
       return jsonData.map((json) => Vehicle.fromJson(json)).toList();
     } else {
-      throw Exception('Error al cargar los vehículos');
+      print('Error al cargar vehículos: ${response.statusCode}, ${response.body}');
+      return []; // Temporalmente devuelve una lista vacía para ver si funciona
     }
   }
 
+  //metodo para eliminar un vehiculo
   Future<void> deleteVehicle(int vehicleId) async {
     print('Intentando eliminar el vehículo con ID: $vehicleId');
     final response = await http.delete(Uri.parse('$baseUrl/vehicles/$vehicleId'));
@@ -24,14 +28,14 @@ class VehicleService {
       throw Exception('Error al eliminar el vehículo');
     }
   }
-
+  //metodo para editar un vehiculo
   Future<void> updateVehicle(Vehicle vehicle) async {
     final response = await http.put(
       Uri.parse('$baseUrl/vehicles/${vehicle.id}'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
-      body: jsonEncode(vehicle.toJson()),  // Aquí usamos el método toJson
+      body: jsonEncode(vehicle.toJson()),
     );
 
     if (response.statusCode != 200) {
@@ -49,7 +53,7 @@ class VehicleService {
       body: jsonEncode(vehicle.toJson()),
     );
 
-    if (response.statusCode != 201) {  // Normalmente, un código 201 indica creación exitosa
+    if (response.statusCode != 201) {
       throw Exception('Error al agregar el vehículo');
     }
   }

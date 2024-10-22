@@ -8,7 +8,7 @@ class Vehicle {
   final String description;
   final int purchasePrice;
   final int rentalPrice;
-  final int idOwner; // Asegúrate de tener esta propiedad definida
+  final int idOwner;
 
   Vehicle({
     required this.id,
@@ -20,7 +20,7 @@ class Vehicle {
     required this.description,
     required this.purchasePrice,
     required this.rentalPrice,
-    required this.idOwner,  // Asegúrate de tener este campo
+    required this.idOwner,
   });
 
   // Método para convertir el objeto Vehicle a un mapa JSON
@@ -35,7 +35,7 @@ class Vehicle {
       'description': description,
       'purchasePrice': purchasePrice,
       'rentalPrice': rentalPrice,
-      'idOwner': idOwner,  // Asegúrate de incluir esto aquí también
+      'idOwner': idOwner,
     };
   }
 
@@ -51,7 +51,7 @@ class Vehicle {
       description: json['description'],
       purchasePrice: json['purchasePrice'],
       rentalPrice: json['rentalPrice'],
-      idOwner: json['idOwner'],  // Asegúrate de tener esta asignación
+      idOwner: json['idOwner'],
     );
   }
 }

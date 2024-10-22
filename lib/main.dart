@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const UserTypeSelectionScreen(), // La pantalla inicial es LoginScreen
+      home: const UserTypeSelectionScreen(),
     );
   }
 }

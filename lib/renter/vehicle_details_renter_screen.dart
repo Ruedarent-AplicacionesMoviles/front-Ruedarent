@@ -51,7 +51,7 @@ class _VehicleDetailsRenterScreenState extends State<VehicleDetailsRenterScreen>
             icon: Icon(isFavorited ? Icons.favorite : Icons.favorite_border),
             onPressed: () {
               setState(() {
-                isFavorited = !isFavorited; // Alternar entre favorito/no favorito
+                isFavorited = !isFavorited;
               });
             },
           ),

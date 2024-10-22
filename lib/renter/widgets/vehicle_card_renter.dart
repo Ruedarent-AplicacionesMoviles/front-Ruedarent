@@ -26,7 +26,7 @@ class _VehicleCardState extends State<VehicleCardRenter> {
     try {
       final ownerDetails = await _authService.getOwnerDetailsById(widget.vehicle.idOwner);
       setState(() {
-        _ownerDetails = ownerDetails;  // Guardamos los detalles del propietario
+        _ownerDetails = ownerDetails;
       });
     } catch (e) {
       print('Error al obtener los detalles del propietario: $e');

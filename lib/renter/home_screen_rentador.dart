@@ -19,7 +19,7 @@ class _HomeScreenRenterState extends State<HomeScreenRenter> {
   @override
   void initState() {
     super.initState();
-    _vehiclesFuture = _vehicleService.getVehicles('1');  // Cargar los vehículos del propietario con idOwner 1
+    _vehiclesFuture = _vehicleService.getVehicles('1');
   }
 
   List<Vehicle> _filterVehicles(List<Vehicle> vehicles) {
